@@ -16,7 +16,6 @@ import {
   GraduationCap,
   Zap,
   Smartphone,
-  Download,
   Menu,
   X,
 } from "lucide-react";
@@ -567,8 +566,9 @@ function useCountdown(targetDate) {
   };
   const [time, setTime] = useState(calc);
   useEffect(() => {
-    const t = setInterval(() => setTime(calc()), 1000);
+    const t = setInterval(() => setTime(calc), 1000);
     return () => clearInterval(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return time;
 }
@@ -2692,7 +2692,7 @@ function Footer() {
                 {links.map((link) => (
                   <li key={link}>
                     <a
-                      href="#"
+                      href="/"
                       style={{
                         color: "rgba(255,255,255,0.35)",
                         fontSize: 14,
@@ -2730,7 +2730,7 @@ function Footer() {
             {["Privacy Policy", "Terms of Use", "Cookie Policy"].map((item) => (
               <a
                 key={item}
-                href="#"
+                href="/"
                 style={{
                   color: "rgba(255,255,255,0.25)",
                   fontSize: 12,
