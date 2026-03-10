@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# KaroPitch — Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **A KaroStartup Initiative** | Connecting Bharat's early-stage founders with India's top investors.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📋 Assignment: Definition of Done — Checklist
 
-### `npm start`
+| Requirement | Status | Notes |
+|---|---|---|
+| **Hero Section** — "Pitch Your Startup to India's Top Investors." | ✅ | Exact headline from brief |
+| **Hero** — Apply to Pitch button | ✅ | Primary CTA, above the fold |
+| **Hero** — Explore Startups button | ✅ | Secondary CTA with play icon |
+| **About Karo Pitch** — Mission & why it was created | ✅ | Full narrative section |
+| **About Karo Pitch** — Bharat / Tier-2 / Tier-3 focus | ✅ | Highlighted in text + feature cards |
+| **How It Works** — 4-step process with icons | ✅ | Apply → Shortlist → Pitch → Raise & Scale |
+| **Step 1** — Apply with your pitch deck | ✅ | |
+| **Step 2** — Get shortlisted by KaroStartup | ✅ | |
+| **Step 3** — Pitch live to investors | ✅ | |
+| **Step 4** — Raise funding and scale | ✅ | |
+| **Who Can Apply** — D2C Brands | ✅ | |
+| **Who Can Apply** — Consumer Startups | ✅ | |
+| **Who Can Apply** — MSMEs | ✅ | |
+| **Who Can Apply** — SaaS Startups | ✅ | |
+| **Who Can Apply** — Manufacturing | ✅ | |
+| **Who Can Apply** — Bharat-focused Startups | ✅ | |
+| **Investors Section** — "Meet Investors Looking for the Next Big Startup." | ✅ | Exact headline from brief |
+| **Featured Startups** — Dummy cards with name, category, description | ✅ | 6 cards in Bento grid |
+| **About KaroStartup** — From karostartup.com | ✅ | Real stats: 500K+ readers, 2000+ stories |
+| **Final CTA** — "Ready to Pitch Your Startup?" | ✅ | Exact copy from brief |
+| **Final CTA** — Apply Now button | ✅ | |
+| **Final CTA** — Partner With Us button | ✅ | |
+| **Design** — Clean, modern UI | ✅ | Dark glassmorphism premium aesthetic |
+| **Design** — Startup ecosystem vibe | ✅ | Emerald + Indigo palette, bold typography |
+| **Design** — Easy navigation | ✅ | Fixed navbar with anchor links |
+| **Design** — Mobile-friendly / responsive | ✅ | Breakpoints at 1024px, 768px, 480px |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Score: 26/26 requirements met ✅**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Deliverables
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| File | Description |
+|---|---|
+| `KaroPitch.jsx` | Complete landing page — single React file, ready to render |
+| `README.md` | This file — DoD checklist, setup guide, design rationale |
+| `SUBMISSION_NOTE.md` | Assignment submission note (tool used + design rationale) |
+| `DESIGN_DECISIONS.md` | Deep-dive justification of every design choice |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Setup & Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Option 1 — Instant Preview (Recommended for submission)
+1. Go to [codesandbox.io](https://codesandbox.io/s/react)
+2. Create a new React sandbox
+3. Replace `App.js` contents with `KaroPitch.jsx`
+4. Copy the shareable URL → submit as your website link
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Option 2 — Local Development
+```bash
+# 1. Create a new React app
+npx create-react-app karopitch
+cd karopitch
 
-### `npm run eject`
+# 2. Install dependencies
+npm install lucide-react
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 3. Replace src/App.js with KaroPitch.jsx contents
+# 4. Run
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Option 3 — Deploy to Vercel (Live URL in 2 minutes)
+```bash
+npx create-react-app karopitch && cd karopitch
+npm install lucide-react
+# Replace App.js with KaroPitch.jsx contents
+npx vercel --prod
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠 Tech Stack
 
-## Learn More
+| Technology | Version | Purpose |
+|---|---|---|
+| React | 18+ | UI framework |
+| Lucide React | 0.383.0 | Icon library |
+| Syne (Google Fonts) | — | Display typography |
+| CSS-in-JS (inline styles) | — | Component styling |
+| CSS Media Queries | — | Responsive breakpoints |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Zero external CSS frameworks** — no Tailwind, no Bootstrap. Pure React + CSS for full portability.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📱 Responsive Breakpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Breakpoint | Layout |
+|---|---|
+| > 1024px | Full desktop — 4-column grids, 2-column layouts |
+| 768px – 1024px | Tablet — 2-column grids, stacked nav |
+| < 768px | Mobile — 2-column grids collapse, hamburger menu, stacked sections |
+| < 480px | Small mobile — compact spacing, readable typography |
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🏗 File Structure (Modular Version)
 
-### Making a Progressive Web App
+```
+src/
+├── App.jsx                    ← Main entry + layout
+├── constants/
+│   └── content.js             ← Single source of truth for all text/data
+└── components/
+    ├── Navbar.jsx              ← Fixed navigation + mobile hamburger
+    ├── Hero.jsx                ← Hero + countdown + email capture
+    ├── LogoMarquee.jsx         ← Scrolling investor logo strip
+    ├── About.jsx               ← Mission + Bharat focus
+    ├── Process.jsx             ← 4-step how it works
+    ├── StartupCard.jsx         ← Reusable startup card component
+    ├── Startups.jsx            ← Bento grid startup showcase
+    ├── Investors.jsx           ← Investor network section
+    ├── WhoCanApply.jsx         ← Eligibility category grid
+    ├── Testimonials.jsx        ← Founder stories + social proof
+    ├── KaroStartupSection.jsx  ← About the parent platform
+    ├── CTASection.jsx          ← Final call to action
+    └── Footer.jsx              ← Site footer + links
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📸 Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Open `KaroPitch.jsx` in Claude.ai to see the live interactive preview with all animations and hover effects.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👥 Credits
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Built with:** Claude (claude.ai) by Anthropic
+- **Platform:** KaroStartup — [karostartup.com](https://karostartup.com)
+- **Assignment:** KaroPitch Website Development — Internship Submission
