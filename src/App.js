@@ -619,6 +619,7 @@ function Hero() {
         justifyContent: "center",
         overflow: "hidden",
         background: "#020817",
+        width: "100%",
       }}
     >
       <div
@@ -636,8 +637,8 @@ function Hero() {
           position: "absolute",
           top: "20%",
           left: "15%",
-          width: 480,
-          height: 480,
+          width: "min(480px, 80vw)",
+          height: "min(480px, 80vw)",
           background: "rgba(0,212,170,0.15)",
           borderRadius: "50%",
           filter: "blur(80px)",
@@ -648,8 +649,8 @@ function Hero() {
           position: "absolute",
           bottom: "15%",
           right: "15%",
-          width: 480,
-          height: 480,
+          width: "min(480px, 80vw)",
+          height: "min(480px, 80vw)",
           background: "rgba(99,102,241,0.15)",
           borderRadius: "50%",
           filter: "blur(80px)",
@@ -660,10 +661,12 @@ function Hero() {
         style={{
           position: "relative",
           zIndex: 10,
+          width: "100%",
           maxWidth: 900,
           margin: "0 auto",
           padding: "120px 24px 80px",
           textAlign: "center",
+          boxSizing: "border-box",
         }}
       >
         <div
@@ -680,6 +683,7 @@ function Hero() {
             fontWeight: 600,
             marginBottom: 32,
             backdropFilter: "blur(10px)",
+            maxWidth: "100%",
           }}
         >
           <span
@@ -689,18 +693,27 @@ function Hero() {
               background: "#00D4AA",
               borderRadius: "50%",
               boxShadow: "0 0 8px #00D4AA",
+              flexShrink: 0,
             }}
           />
           {HERO.badge}
         </div>
 
-        <h1 style={{ fontWeight: 900, lineHeight: 1.0, marginBottom: 24 }}>
+        <h1
+          style={{
+            fontWeight: 900,
+            lineHeight: 1.05,
+            marginBottom: 24,
+            overflowWrap: "break-word",
+            wordBreak: "break-word",
+          }}
+        >
           {HERO.headline.map((line, i) => (
             <span
               key={i}
               style={{
                 display: "block",
-                fontSize: "clamp(56px,10vw,112px)",
+                fontSize: "clamp(36px,8vw,112px)",
                 background:
                   i === 0
                     ? "none"
@@ -720,10 +733,11 @@ function Hero() {
         <p
           style={{
             color: "rgba(255,255,255,0.55)",
-            fontSize: 18,
+            fontSize: "clamp(14px,4vw,18px)",
             lineHeight: 1.7,
             maxWidth: 640,
             margin: "0 auto 32px",
+            overflowWrap: "break-word",
           }}
         >
           {HERO.subtext}
@@ -2762,11 +2776,14 @@ export default function App() {
         fontFamily: "'Syne', 'Inter', sans-serif",
         background: "#020817",
         minHeight: "100vh",
+        overflowX: "hidden",
+        width: "100%",
       }}
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800;900&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { overflow-x: hidden; width: 100%; }
         html { scroll-behavior: smooth; }
         input::placeholder { color: rgba(255,255,255,0.3); }
 
@@ -2805,6 +2822,7 @@ export default function App() {
         @media(max-width:480px){
           .grid-4 { grid-template-columns:repeat(2,1fr); gap:10px; }
           .stats4 { grid-template-columns:repeat(2,1fr); }
+          .countdown-inner { padding: 12px !important; gap: 6px; }
         }
 
         @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }

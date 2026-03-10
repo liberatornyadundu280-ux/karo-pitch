@@ -11,6 +11,7 @@
 **Claude (claude.ai)** by Anthropic — used as a full-stack frontend architect and design collaborator.
 
 Claude was used to:
+
 - Architect the full modular React component structure
 - Design the visual identity and colour system
 - Write all JSX, CSS, and responsive media queries
@@ -22,12 +23,7 @@ Claude was used to:
 
 ## 2. Website Link
 
-> 🔗 **[Paste your deployed URL here after uploading to CodeSandbox / Vercel / Netlify]**
-
-**Deployment steps:**
-1. Go to [codesandbox.io/s/react](https://codesandbox.io/s/react)
-2. Paste `KaroPitch.jsx` into `App.js`
-3. Copy the shareable preview URL
+> 🔗 https://karo-pitch-byvx.vercel.app/
 
 ---
 
@@ -71,6 +67,7 @@ The page is ordered for maximum founder conversion psychology:
 ### Why React and not a no-code tool?
 
 The assignment permitted AI website builders like Framer, Wix AI, or Webflow. However, using Claude to write React code produces a result that is:
+
 - **Fully portable** — can be deployed anywhere, owned completely, no vendor lock-in
 - **Precisely controlled** — every pixel, animation, and interaction is intentional
 - **Architecturally sound** — modular components, constants separation, clean props
@@ -82,15 +79,15 @@ The trade-off is that a website link requires a deployment step (CodeSandbox/Ver
 
 ## 4. Competitive Analysis Summary
 
-| Feature | KaroPitch | LetsVenture | AngelList India |
-|---|---|---|---|
-| Visual identity | Premium dark theme | Generic light corporate | Minimalist, muted |
-| Above-fold urgency | Live countdown + email | None | None |
-| Social proof speed | Logo marquee after hero | Bottom of page | None |
-| Startup showcase | Interactive Bento grid | Basic table | List view |
-| Mobile experience | Fully responsive | Partially responsive | Responsive |
-| Brand personality | Bold, cultural, founder-first | Utility tool | Utility tool |
-| Conversion architecture | 10-section funnel | 5 sections | 4 sections |
+| Feature                 | KaroPitch                     | LetsVenture             | AngelList India   |
+| ----------------------- | ----------------------------- | ----------------------- | ----------------- |
+| Visual identity         | Premium dark theme            | Generic light corporate | Minimalist, muted |
+| Above-fold urgency      | Live countdown + email        | None                    | None              |
+| Social proof speed      | Logo marquee after hero       | Bottom of page          | None              |
+| Startup showcase        | Interactive Bento grid        | Basic table             | List view         |
+| Mobile experience       | Fully responsive              | Partially responsive    | Responsive        |
+| Brand personality       | Bold, cultural, founder-first | Utility tool            | Utility tool      |
+| Conversion architecture | 10-section funnel             | 5 sections              | 4 sections        |
 
 KaroPitch wins on design ambition, conversion architecture, and brand identity. LetsVenture wins on real data and functional depth (but that's because they're a live product, not a demo).
 
