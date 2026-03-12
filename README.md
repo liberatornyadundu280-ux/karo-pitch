@@ -1,145 +1,113 @@
-# KaroPitch — Landing Page
+# KaroPitch
 
-> **A KaroStartup Initiative** | Connecting Bharat's early-stage founders with India's top investors.
+KaroPitch is a responsive React landing page for a startup-investor pitching platform focused on Bharat's early-stage founders. The experience is built as a single-page website with bold hero messaging, investor social proof, featured startups, founder testimonials, and multiple conversion-focused calls to action.
 
----
+## Project Overview
 
-## 📋 Assignment: Definition of Done — Checklist
+- Built with `Create React App`
+- Main UI lives in `src/App.js`
+- Uses `lucide-react` for icons
+- Styling is handled with inline styles plus a small global `<style>` block inside the app
+- Designed as a polished, mobile-friendly marketing page
 
-| Requirement | Status | Notes |
-|---|---|---|
-| **Hero Section** — "Pitch Your Startup to India's Top Investors." | ✅ | Exact headline from brief |
-| **Hero** — Apply to Pitch button | ✅ | Primary CTA, above the fold |
-| **Hero** — Explore Startups button | ✅ | Secondary CTA with play icon |
-| **About Karo Pitch** — Mission & why it was created | ✅ | Full narrative section |
-| **About Karo Pitch** — Bharat / Tier-2 / Tier-3 focus | ✅ | Highlighted in text + feature cards |
-| **How It Works** — 4-step process with icons | ✅ | Apply → Shortlist → Pitch → Raise & Scale |
-| **Step 1** — Apply with your pitch deck | ✅ | |
-| **Step 2** — Get shortlisted by KaroStartup | ✅ | |
-| **Step 3** — Pitch live to investors | ✅ | |
-| **Step 4** — Raise funding and scale | ✅ | |
-| **Who Can Apply** — D2C Brands | ✅ | |
-| **Who Can Apply** — Consumer Startups | ✅ | |
-| **Who Can Apply** — MSMEs | ✅ | |
-| **Who Can Apply** — SaaS Startups | ✅ | |
-| **Who Can Apply** — Manufacturing | ✅ | |
-| **Who Can Apply** — Bharat-focused Startups | ✅ | |
-| **Investors Section** — "Meet Investors Looking for the Next Big Startup." | ✅ | Exact headline from brief |
-| **Featured Startups** — Dummy cards with name, category, description | ✅ | 6 cards in Bento grid |
-| **About KaroStartup** — From karostartup.com | ✅ | Real stats: 500K+ readers, 2000+ stories |
-| **Final CTA** — "Ready to Pitch Your Startup?" | ✅ | Exact copy from brief |
-| **Final CTA** — Apply Now button | ✅ | |
-| **Final CTA** — Partner With Us button | ✅ | |
-| **Design** — Clean, modern UI | ✅ | Dark glassmorphism premium aesthetic |
-| **Design** — Startup ecosystem vibe | ✅ | Emerald + Indigo palette, bold typography |
-| **Design** — Easy navigation | ✅ | Fixed navbar with anchor links |
-| **Design** — Mobile-friendly / responsive | ✅ | Breakpoints at 1024px, 768px, 480px |
+## Features
 
-**Score: 26/26 requirements met ✅**
+- Fixed navbar with desktop and mobile navigation
+- Hero section with countdown timer and email capture UI
+- Investor logo marquee
+- Mission and Bharat-first positioning section
+- Four-step startup application process
+- Featured startups showcase
+- Investor network section
+- Eligibility grid for founders
+- Founder testimonials and social proof
+- KaroStartup partner section
+- Final conversion CTA and footer
 
----
+## Tech Stack
 
-## 🚀 Deliverables
+- `react` `19.2.0`
+- `react-dom` `19.2.0`
+- `react-scripts` `5.0.1`
+- `lucide-react` `0.577.0`
+- `@testing-library/*` for frontend testing
 
-| File | Description |
-|---|---|
-| `KaroPitch.jsx` | Complete landing page — single React file, ready to render |
-| `README.md` | This file — DoD checklist, setup guide, design rationale |
-| `SUBMISSION_NOTE.md` | Assignment submission note (tool used + design rationale) |
-| `DESIGN_DECISIONS.md` | Deep-dive justification of every design choice |
+## Getting Started
 
----
+### Prerequisites
 
-## ⚙️ Setup & Deployment
+- `Node.js` 18+ recommended
+- `npm`
 
-### Option 1 — Instant Preview (Recommended for submission)
-1. Go to [codesandbox.io](https://codesandbox.io/s/react)
-2. Create a new React sandbox
-3. Replace `App.js` contents with `KaroPitch.jsx`
-4. Copy the shareable URL → submit as your website link
+### Install
 
-### Option 2 — Local Development
 ```bash
-# 1. Create a new React app
-npx create-react-app karopitch
-cd karopitch
+npm install
+```
 
-# 2. Install dependencies
-npm install lucide-react
+### Run locally
 
-# 3. Replace src/App.js with KaroPitch.jsx contents
-# 4. Run
+```bash
 npm start
 ```
 
-### Option 3 — Deploy to Vercel (Live URL in 2 minutes)
+The app will start in development mode at `http://localhost:3000`.
+
+### Production build
+
 ```bash
-npx create-react-app karopitch && cd karopitch
-npm install lucide-react
-# Replace App.js with KaroPitch.jsx contents
-npx vercel --prod
+npm run build
 ```
 
----
+This creates an optimized production bundle in the `build/` folder.
 
-## 🛠 Tech Stack
+### Run tests
 
-| Technology | Version | Purpose |
-|---|---|---|
-| React | 18+ | UI framework |
-| Lucide React | 0.383.0 | Icon library |
-| Syne (Google Fonts) | — | Display typography |
-| CSS-in-JS (inline styles) | — | Component styling |
-| CSS Media Queries | — | Responsive breakpoints |
-
-**Zero external CSS frameworks** — no Tailwind, no Bootstrap. Pure React + CSS for full portability.
-
----
-
-## 📱 Responsive Breakpoints
-
-| Breakpoint | Layout |
-|---|---|
-| > 1024px | Full desktop — 4-column grids, 2-column layouts |
-| 768px – 1024px | Tablet — 2-column grids, stacked nav |
-| < 768px | Mobile — 2-column grids collapse, hamburger menu, stacked sections |
-| < 480px | Small mobile — compact spacing, readable typography |
-
----
-
-## 🏗 File Structure (Modular Version)
-
-```
-src/
-├── App.jsx                    ← Main entry + layout
-├── constants/
-│   └── content.js             ← Single source of truth for all text/data
-└── components/
-    ├── Navbar.jsx              ← Fixed navigation + mobile hamburger
-    ├── Hero.jsx                ← Hero + countdown + email capture
-    ├── LogoMarquee.jsx         ← Scrolling investor logo strip
-    ├── About.jsx               ← Mission + Bharat focus
-    ├── Process.jsx             ← 4-step how it works
-    ├── StartupCard.jsx         ← Reusable startup card component
-    ├── Startups.jsx            ← Bento grid startup showcase
-    ├── Investors.jsx           ← Investor network section
-    ├── WhoCanApply.jsx         ← Eligibility category grid
-    ├── Testimonials.jsx        ← Founder stories + social proof
-    ├── KaroStartupSection.jsx  ← About the parent platform
-    ├── CTASection.jsx          ← Final call to action
-    └── Footer.jsx              ← Site footer + links
+```bash
+npm test
 ```
 
----
+## Scripts
 
-## 📸 Screenshots
+- `npm start` - starts the local development server
+- `npm run build` - creates the production build
+- `npm test` - launches the test runner
+- `npm run eject` - ejects the CRA configuration
 
-Open `KaroPitch.jsx` in Claude.ai to see the live interactive preview with all animations and hover effects.
+## Project Structure
 
----
+```text
+karo-pitch/
+|-- public/
+|   |-- favicon.ico
+|   |-- index.html
+|   |-- logo192.png
+|   |-- logo512.png
+|   |-- manifest.json
+|   `-- robots.txt
+|-- src/
+|   |-- App.css
+|   |-- App.js
+|   |-- App.test.js
+|   |-- index.css
+|   |-- index.js
+|   |-- logo.svg
+|   |-- reportWebVitals.js
+|   `-- setupTests.js
+|-- DESIGN_DECISIONS.md
+|-- SUBMISSION_NOTE.md
+|-- package-lock.json
+|-- package.json
+`-- README.md
+```
 
-## 👥 Credits
+## Notes
 
-- **Built with:** Claude (claude.ai) by Anthropic
-- **Platform:** KaroStartup — [karostartup.com](https://karostartup.com)
-- **Assignment:** KaroPitch Website Development — Internship Submission
+- The page content is currently driven by constants declared at the top of `src/App.js`.
+- The UI is intentionally implemented in a single file, which makes submission and review easy, but a future refactor could split sections into reusable components and move content into separate data files.
+- The repository also includes `DESIGN_DECISIONS.md` and `SUBMISSION_NOTE.md` for extra project context.
+
+## Known Follow-Up
+
+- `src/App.test.js` is still the default Create React App test and does not match the current UI yet.
+
